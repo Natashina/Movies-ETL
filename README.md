@@ -1,6 +1,6 @@
 ### Movies-ETL
 
-In the Challenge.py file there is a Challenge_Function that takes in three arguments:
+In the **Challenge.py** file there is a Challenge_Function that takes in three arguments:
 - Wikipedia data
 - Kaggle metadata
 - MovieLens rating data (from Kaggle)
@@ -51,3 +51,5 @@ The following assumptions have been made regarding iteration of Wikipedia and Ka
     
     print("Error in conversion of popularity.") 
     pass
+  
+  Refer to **Challenge_v1.py** file where "try-except" blocks are included.
