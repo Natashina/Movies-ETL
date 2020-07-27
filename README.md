@@ -17,9 +17,14 @@ To capture different expressions there are the following two variables:
 
 - form_one = r'\$\s*\d+\.?\d*\s*[mb]illi?on',  that represents “$123.4 million/billion.” pattern
 - form_two = r'\$\s*\d{1,3}(?:[,\.]\d{3})+(?!\s[mb]illion)' that represents “$123,456,789.” pattern
-
-5485 rows match either form one or form two; and 1548 rows in Box Office columnare showing null values.
-However there is other data included in different currencies and we assume that data in 5485 rows is sufficient for our purpose and a scope. A function named parse_dollars turns the extracted values into a numeric value, it takes in a string and returns a floating-point number.
+A function named parse_dollars turns the extracted values into a numeric value, it takes in a string and returns a floating-point number.
 The original data of Box Office column is eliminated.
 
+5485 rows match either form one or form two; and 1548 rows in Box Office columnare showing null values.
+Box office column and Budget are assumed to be in the same currency. In a reality these columns include multiple currency types.
+
+Future version of the Function and the enhancement would be to include code to convert multiple currency to a single currency.
+
 ##4. The same approach and the same patterns of form_one and form_two are used to parse Budget data. 
+
+##5.
