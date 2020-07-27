@@ -6,12 +6,13 @@ In the Challenge.py file there is a Challenge_Function that takes in three argum
 - MovieLens rating data (from Kaggle)
 
 The following assumptions have been made regarding iteration of Wikipedia data.
-1. Duplicates of IMDb IDs were removed from Wikipedia dataset, that reduced the original number of rows from 7311 to 7033. 
 
-2. Columns that have more than 90% null values have been eliminated from the dataset. Thenumber of columns went down to 21.
+##1. Duplicates of IMDb IDs were removed from Wikipedia dataset, that reduced the original number of rows from 7311 to 7033. 
+
+##2. Columns that have more than 90% null values have been eliminated from the dataset. Thenumber of columns went down to 21.
 [column for column in wiki_movies_df.columns if wiki_movies_df[column].isnull().sum() < len(wiki_movies_df) * 0.9]
 
-3. The code is making these additional assumptions as regards Box office data:
+##3. The code is making these additional assumptions as regards Box office data:
 To capture different expressions there are the following two variables: 
 
 - form_one = r'\$\s*\d+\.?\d*\s*[mb]illi?on',  that represents “$123.4 million/billion.” pattern
