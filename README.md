@@ -42,10 +42,10 @@ The following assumptions have been made regarding iteration of Wikipedia and Ka
   
   except: 
         print("Error in conversion of ID.")
-        pass
+    pass
   
   try: kaggle_metadata['popularity'] = pd.to_numeric(kaggle_metadata['popularity'])
   
   except: 
         print("Error in conversion of popularity.") 
-        pass
+    pass
