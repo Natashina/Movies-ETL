@@ -31,4 +31,5 @@ The following assumptions have been made regarding iteration of Wikipedia and Ka
   The code is included below:
   kaggle_metadata['id'] = pd.to_numeric(kaggle_metadata['id'], errors='raise')
   kaggle_metadata['popularity'] = pd.to_numeric(kaggle_metadata['popularity'], errors='raise')
-  However, in the future iterations the code might throw a error. We can use "try except" blocks here to print the error message and ensure Challenge_Function will continue       running.
+  However, in the future iterations the code might throw a error. 
+  "Try-except" blocks can be used here to print the error message and ensure Challenge_Function will continue to work.
