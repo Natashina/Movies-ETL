@@ -5,7 +5,7 @@ In the Challenge.py file there is a Challenge_Function that takes in three argum
 - Kaggle metadata
 - MovieLens rating data (from Kaggle)
 
-The following assumptions have been made regarding iteration of Wikipedia data.
+The following assumptions have been made regarding iteration of Wikipedia and Kaggle data.
 
 ##1. Duplicates of IMDb IDs were removed from Wikipedia dataset, that reduced the original number of rows from 7311 to 7033. 
 
@@ -27,4 +27,8 @@ Future version of the Function and the enhancement would be to include code to c
 
 ##4. The same approach and the same patterns of form_one and form_two are used to parse Budget data. 
 
-##5.
+##5. To_numeric() method from Pandas has been used to convert numeric columns:
+The code is included below:
+kaggle_metadata['id'] = pd.to_numeric(kaggle_metadata['id'], errors='raise')
+kaggle_metadata['popularity'] = pd.to_numeric(kaggle_metadata['popularity'], errors='raise')
+However, in the future iteration the code could trow a error. We can use "try except" blocks here to print the error message and ensure Challenge_Function will continue running.
