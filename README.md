@@ -19,3 +19,6 @@ To capture different expressions there are the following two variables:
 - form_two = r'\$\s*\d{1,3}(?:[,\.]\d{3})+(?!\s[mb]illion)' that represents “$123,456,789.” pattern
 
 5485 rows match either form one or form two.
+However there is other data included in different currencies and we assume that data in USD 5485 rows is sufficient for our purpose and scope.
+
+##4. 
