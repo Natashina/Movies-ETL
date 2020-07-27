@@ -12,7 +12,7 @@ The following assumptions have been made regarding iteration of Wikipedia data.
 ##2. Columns that have more than 90% null values have been eliminated from the dataset. Thenumber of columns went down to 21.
 [column for column in wiki_movies_df.columns if wiki_movies_df[column].isnull().sum() < len(wiki_movies_df) * 0.9]
 
-##3. The code is making these additional assumptions as regards Box office data:
+##3. The code is making these additional assumptions as regards "Box office" data:
 To capture different expressions there are the following two variables: 
 
 - form_one = r'\$\s*\d+\.?\d*\s*[mb]illi?on',  that represents “$123.4 million/billion.” pattern
@@ -20,7 +20,7 @@ To capture different expressions there are the following two variables:
 A function named parse_dollars turns the extracted values into a numeric value, it takes in a string and returns a floating-point number.
 The original data of Box Office column is eliminated.
 
-5485 rows match either form one or form two; and 1548 rows in Box Office columnare showing null values.
+5485 rows match either form one or form two; and 1548 rows in "Box Office" column are showing null values.
 Box office column and Budget are assumed to be in the same currency. In a reality these columns include multiple currency types.
 
 Future version of the Function and the enhancement would be to include code to convert multiple currency to a single currency.
