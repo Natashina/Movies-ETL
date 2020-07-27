@@ -33,3 +33,12 @@ The following assumptions have been made regarding iteration of Wikipedia and Ka
   kaggle_metadata['popularity'] = pd.to_numeric(kaggle_metadata['popularity'], errors='raise')
   However, in the future iterations the code might throw a error. 
   "Try-except" blocks can be used here to print the error message and ensure Challenge_Function will continue to work.
+  The code would look as following:
+  try: kaggle_metadata['id'] = pd.to_numeric(kaggle_metadata['id'])
+  except: 
+        print("Error in conversion of ID.")
+        pass
+  try: kaggle_metadata['popularity'] = pd.to_numeric(kaggle_metadata['popularity'])
+  except: 
+        print("Error in conversion of popularity." 
+        pass
